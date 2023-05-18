@@ -1,0 +1,2162 @@
+/* ################## ESTILIZAÇÃO DEYVID */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+@font-face {
+  font-family: Junegull-Regular;
+  src: url(./fonts/font/junegull/junegull-rg.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Acumin-Regular;
+  src: url(./fonts/font/Acumin-Concept-Regular/Acumin-Pro-Regular.ttf);
+  font-weight: 400;
+}
+@import url(./cursor/by-ragnarok-online-art/by-ragnarok-online-art.crs);
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes left-slide {
+  0% {
+    opacity: 0;
+    right: -3000px;
+  }
+  40% {
+    opacity: 0;
+    right: -3000px;
+  }
+  70% {
+    opacity: 0.6;
+    right: -3000px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moviment {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(20px, 20px);
+  }
+  40% {
+    transform: translate(0px, 30px);
+  }
+  60% {
+    transform: translate(-20px, 0px);
+  }
+  85% {
+    transform: translate(-30px, -20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes vibrate {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes balanco {
+  0% {
+    transform: rotatez(0deg);
+  }
+  25% {
+    transform: rotatez(20deg);
+  }
+  50% {
+    transform: rotatez(0deg);
+  }
+  75% {
+    transform: rotatez(-20deg);
+  }
+  100% {
+    transform: rotatez(-20deg);
+  }
+}
+@keyframes vida {
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes cores-shadow {
+  0% {
+    box-shadow: 0px 2px 30px var(--verde-clr);
+  }
+  50% {
+    box-shadow: 0px 3px 30px var(--azul-clr);
+  }
+  100% {
+    box-shadow: 0px 5px 30px var(--laranja-clr);
+  }
+}
+@keyframes cores-border {
+  0% {
+    border: 1px solid var(--verde-clr);
+  }
+  50% {
+    border: 1px solid var(--azul-clr);
+  }
+  100% {
+    border: 1px solid var(--laranja-clr);
+  }
+}
+@keyframes cores-text {
+  0% {
+  color: var(--verde-clr);
+  }
+  50% {
+    color: var(--azul-clr);
+  }
+  100% {
+    color: var(--laranja-clr);
+  }
+}
+@keyframes next {
+  0% {
+  transform: translateX(0);
+  }
+  50% {
+  transform: translateX(30px);
+  }
+  100% {
+    cotransform: translateX(60px);
+  }
+  
+}
+@keyframes prev {
+  0% {
+  transform: translateX(0);
+  }
+  50% {
+  transform: translateX(-30px);
+  }
+  100% {
+    cotransform: translateX(-60px);
+  }
+  
+}
+@keyframes upp {
+  0%{
+    transform: translate(290px,-160px);
+  }
+  10%{
+    transform: translate(270px,-150px);
+  }
+  20%{
+    transform: translate(200px,-140px);
+  }
+  50%{
+    transform: translate(0px,0px);
+  }
+  
+}
+
+@keyframes rotateInDownRight {
+  0% {
+  -webkit-transform-origin: right bottom;
+  transform-origin: right bottom;
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
+  }
+  50% {
+  -webkit-transform-origin: right bottom;
+  transform-origin: right bottom;
+  -webkit-transform: none;
+  transform: none;
+  }
+  } 
+
+/* ##### ESTILIZACAO GERAL #####*/
+
+:root {
+  --vermelho-clr: red;
+  --laranja-clr: #ff8a00;
+  --verde-clr: #0df205;
+  --azul-clr: #3d9df2;
+  --branco-clr: #ffffff;
+  --branco-bg-clr: rgba(255, 255, 255, 0.749);
+  --shadow-clr: rgb(0, 0, 0);
+  --bg-clr: rgba(92, 92, 92, 0.74);
+  --title-clr: #066a75;
+  --gold-clr: #B68834;
+  --cores-text: animation: cores-text 4s ease-in-out infinite alternate;;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  z-index: 0;
+}
+a {
+  cursor: url(./cursor/ragnarok-hand-press.cur), pointer;
+}
+a img {
+  cursor: url(./cursor/ragnarok-hand-press.cur), pointer;
+}
+body,
+html {
+  background-color: black;
+  cursor: url(./cursor/Tera-online.cur), default;
+}
+h1 {
+  font-size: 3rem;
+  color: var(--title-clr) !important;
+}
+h2 {
+  font-size: 1.5rem;
+}
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+  /* border: 1px solid red; */
+}
+button{
+  cursor: url(./cursor/ragnarok-hand-press.cur),default;
+}
+.container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.disable{
+    cursor: none;
+}
+.vermelho{
+  color: var(--vermelho-clr);
+}
+#mais{
+  display: none;
+  width: 100%;
+  margin: 10px 0;
+  transition: 1s;
+  /* border: 1px solid red; */
+  
+}
+/* ##### ESTILIZACAO GERAL #####*/
+
+/* ##### ESTILIZACAO TOPO ##### */
+
+    .topo {
+    position: relative;
+    background-color: black;
+    background-image: url(./img/fundo/fundo-layoutsite.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top right;
+    color: white;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 1s;
+    /* border: 1px solid red; */
+    }
+    #apresentacao {
+    position: relative;
+    width: 1240px;
+    margin: 0 auto;
+    height: 937px;
+    transition: 1s;
+    /* border: 1px solid red; */
+    }
+    .laranja {
+    color: var(--laranja-clr);
+    }
+    .efeito {
+    position: relative;
+    /* border: 1px solid red; */
+    }
+    .divisor-effect-black {
+    width: 100%;
+    height: 25px;
+    margin: 20px 0 30px 0;
+    background-image: url(./img/images/title_bar02.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: 1px solid red; */
+    }
+    .divisor-effect-gold {
+    width: 100%;
+    height: 25px;
+    margin: 20px 0 30px 0;
+    background-image: url(./img/images/title_bar03.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: 1px solid red; */
+    }
+    #close-menu {
+    position: relative;
+    display: none;
+    cursor: url(./cursor/ragnarok-hand-press.cur),default;
+    }
+    .animal {
+    font-family: serif;
+    color: orange;
+    text-align: center;
+    text-decoration: none;
+    opacity: 1;
+    font-weight: 400;
+    font-family: "Junegull-Regular", sans-serif;
+    letter-spacing: 0.1em;
+    animation: animate 1s linear infinite;
+    }
+    .efeito::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 10px;
+    background-image: url(./img/images/title_bar03.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    }
+    .efeito:hover::after {
+    width: 100%;
+    transition: 0.5s;
+    }
+
+    /* ESTILOS DO CABECALHO */
+    #cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-width: min-content;
+    gap: 5%;
+    margin: 0 auto;
+    background-color: #000000ba;
+    padding: 20px 0 10px 0;
+    animation: cores-shadow 5s linear infinite alternate-reverse;
+    z-index: 2;
+    /* border: 1px solid red; */
+    }
+    .navegacao {
+    display: flex;
+    flex-direction: row;
+    }
+    .logo {
+      position: relative;
+      display: block;
+      width: max-content;
+      z-index: 1;
+      transition: 1s;
+      /* border: 1px solid green; */
+    }
+    .logo img {
+    border-radius: 10px;
+    }
+    #btn-menu {
+    display: none;
+    width: max-content;
+    height: 100%;
+    background-color: transparent;
+    margin: 10px;
+    z-index: 3;
+    /* border: 1px solid red; */
+    }
+    .menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: max-content;
+    /* border: 1px solid blue; */
+    }
+    .menu ul {
+    display: flex;
+    list-style: none;
+    font-size: 25px;
+    }
+    .menu ul li {
+    width: max-content;
+    }
+    .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: "Acumin-Regular", sans-serif;
+    margin: 0 10px;
+    }
+    .menu ul li a:hover {
+    color: var(--laranja-clr);
+    }
+    .menu ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    transition: 1s;
+    background-color: white;
+    }
+    .menu ul li a:hover::after {
+    color: var(--laranja-clr);
+    width: 100%;
+    transition: 1s;
+    }
+    #vote {
+    font-size: 2rem;
+    top: 40px;
+    right: 300px;
+    margin: 0 5px 0 20px;
+    z-index: 3 !important;
+    /* border: 1px solid red; */
+    cursor: url(./cursor/ragnarok-hand-press.cur), default;
+    }
+
+    .casa {
+    right: 60px;
+    }
+    /* FIM ESTILIZAÇÃO CABECALHO */
+
+    /* ESTILIZAÇÃO HOME */
+    #homepg {
+    position: relative;
+    margin-top: 200px;
+    left: -150px;
+    background-color: rgba(92, 92, 92, 0.74);
+    width: 550px;
+    height: max-content;
+    border-radius: 60px;
+    padding: 10px 20px;
+    transition: 1s;
+    /* border: 1px solid red; */
+    }
+    #homepg h1{
+        color: var(--branco-clr) !important;
+    }
+    .logo-titulo {
+    display: none;
+    position: absolute;
+    width: max-content;
+    margin: 0 auto;
+    top: -140px;
+    left: 0;
+    right: 0;
+    /* border: 1px solid red; */
+    }
+    .titulo {
+    position: relative;
+    text-align: center;
+    /* letter-spacing: 2.29px; */
+    padding-top: 50px;
+    /* border: 1px solid red; */
+    }
+    .titulo h1 {
+    letter-spacing: 2.29px;
+    line-height: 80px;
+    font-family: "Junegull-Regular", sans-serif !important;
+    font-weight: 400;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--laranja-clr);
+    }
+    .titulo h2 {
+    font-size: 2rem;
+    font-family: "Junegull-Regular", sans-serif !important;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--branco-clr);
+    }
+    .login a{
+      font-size: 1.4em;
+      /* border: 1px solid white; */
+    }
+    .titulo a {
+    color: var(--branco-clr);
+    }
+
+    .logar {
+    text-align: center;
+    position: relative;
+    /* border: 1px solid red; */
+    }
+    .logar-ja-tenho-conta {
+    padding: 40px 0 20px 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid green;  */
+    }
+    .logar-ja-tenho-conta a {
+    position: relative;
+    text-decoration: none;
+    font-family: Acumin-Regular, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0 100px;
+    color: var(--branco-clr);
+    }
+    a:hover {
+    color: var(--laranja-clr);
+    }
+    .logar-social-media a:hover img {
+    animation: balanco 0.1s linear 1;
+    }
+
+    .logar-social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    /* border: 1px solid blue; */
+    }
+    .logar-social-media img {
+    margin: 0 20px;
+    /* border: 1px solid red; */
+    }
+
+    /* FIM ESTILIZAÇÃO HOME */
+    #fundo-personagens {
+    width: max-content;
+    position: absolute;
+    top: -100px;
+    left: 10%;
+    z-index: -1;
+    opacity: 1;
+    /* border: 1px solid red; */
+    }
+    #fundo-personagens img {
+    position: relative;
+    animation: moviment 10s linear infinite;
+    }
+
+    /* ESTILIZAÇÃO DOS PERSONAGENS */
+
+    /* ESTILIZAÇÃO DOS COOKIES */
+    .cookies {
+    position: fixed;
+    width: 450px;
+    right: 80px;
+    bottom: 20px;
+    padding: 15px 20px;
+    background: linear-gradient(
+        -40deg,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.868) 80%,
+        rgba(0, 0, 0, 0.844) 40%
+    );
+    border-radius: 20px;
+    font-family: Acumin-Regular;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.312);
+    animation: left-slide 4s ease-in-out 1;
+    /* border: 1px solid red; */
+    }
+    .cookies::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    animation: cores-border 4s infinite ease-in-out alternate;
+    background-color: transparent;
+    }
+    .cookies::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    animation: cores-shadow 4s infinite ease-in-out alternate;
+    background-color: transparent;
+    z-index: 1;
+    }
+    .cookies h3 {
+    text-align: center;
+    color: var(--laranja-clr);
+    margin: 10px 0;
+    }
+    .cookies > div > p {
+    text-align: center;
+    /* text-justify: justify; */
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    }
+    .btn-cookies {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3em;
+
+    /* border: 1px solid red; */
+    }
+    .aceitar,
+    .ler-mais {
+    color: var(--laranja-clr);
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-family: "Junegull-Regular", sans-serif;
+    z-index: 2;
+    }
+    .aceitar:hover,
+    .ler-mais:hover {
+    color: var(--laranja-clr);
+    color: green;
+    cursor: url(./cursor/ragnarok-hand-press.cur), pointer;
+    }
+
+    /* FIM ESTILIZAÇÃO DOS COOKIES */
+/* ##### ESTILIZACAO TOPO ##### */
+
+/* ESTILIZAÇÃO ABOUT/SOBRE */
+#about {
+  position: relative;
+  padding-top: 110px;
+  background-image: url(./img/bg/boy-ragnarok.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-attachment: fixed;
+}
+/* BANNER PROPAGANDA */
+.propaganda {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 150px;
+  margin-bottom: 50px;
+  background-image: url(./img/gif/fundo-site-gif.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  border-end-end-radius: 100px;
+  border-top-left-radius: 100px;
+  box-shadow: 3px 3px 10px var(--shadow-clr);
+
+  /* border: 1px solid red; */
+}
+.propaganda:hover {
+  animation: vibrate 0.2s linear 1;
+}
+
+#propaganda-sobre {
+  position: absolute;
+  top: 10px;
+  box-shadow: 2px 2px 15px var(--verde-clr);
+}
+/* BANNER PROPAGANDA */
+#sobre {
+  display: flex;
+  height: 100%;
+  max-height: 1133px;
+  min-height: 1133px;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  background-color: var(--branco-bg-clr);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px white;
+  /* border: 1px solid red; */
+}
+#sobre .sobre-row {
+  width: 100%;
+  height: max-content;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  padding-top: 100px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* border: 1px solid blue; */
+}
+
+.area-video {
+  /* border: 1px solid red; */
+  max-width: 555px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.area-video .bg-img {
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+}
+.area-video .personagem-about {
+  /* border: 1px solid red; */
+  width: 65%;
+  position: absolute;
+  margin-right: 30px;
+  top: -10px;
+  left: 50px;
+}
+#npc1{
+  position: absolute;
+  display: flex;
+  width: 195px;
+  height: 229px;
+  justify-content: center;
+  align-items: center;
+  right: 70px;
+  bottom: 0px;
+  padding: 0;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+#npc1 img{
+  position: relative;
+  width: min-content;
+}
+
+
+.area-texto {
+  position: relative;
+  width: 50%;
+  min-width: 430px;
+  margin-left: 10px;
+  height: max-content;
+  max-height: 1000px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: scroll;
+  /* border: 1px solid red; */
+}
+.texto {
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: max-content;
+  padding: 20px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: clamp(1em, 1em + 1vw, 1.3em);
+  font-weight: 400;
+}
+.texto h1 {
+  color: var(--title-clr);
+  text-align: center;
+}
+.texto ul {
+  list-style: none;
+}
+.texto ul li {
+  /* border: 1px solid green; */
+  display: flex;
+  padding: 5px;
+  margin: 0 0 10px 0;
+}
+.texto ul li:hover {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+.texto ul li p span {
+  color: var(--laranja-clr);
+}
+/* ESTILIZAÇÃO ABOUT/SOBRE */
+
+/* ESTILIZACAO SERVER */
+#server {
+  padding-top: 110px;
+  padding-bottom: 100px;
+  background-image: url(./img/bg/woman-ragnarok-style.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left center;
+}
+.servidor {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--branco-bg-clr);
+  margin-bottom: 100px;
+  display: flex;
+  border-radius: 20px;
+  animation: cores-shadow 4s ease-in-out infinite alternate;
+  overflow: hidden;
+  padding: 50px 20px;
+  /* z-index: 3 !important; */
+  /* border: 1px solid red; */
+}
+.servidor-title {
+  /* border: 1px solid red; */
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+.servidor-title h2{
+  color: var(--title-clr);
+  font-size: 2.5em;
+  margin: 20px 0 20px 0;
+}
+.servidor .divisor-effect-black {
+  width: 50%;
+  margin: 30px auto;
+  /* border: 1px solid red; */
+  background-size: inherit;
+  background-repeat: repeat-x;
+}
+.servidor-galery {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  gap: 40px 60px;
+  grid-template-columns: max-content max-content max-content;
+  grid-template-rows: max-content;
+  max-width: max-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 3 !important;
+  /* border: 1px solid red; */
+}
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  width: 350px;
+  max-width: 350px;
+  height: 235px;
+  padding: 0;
+  border: 1px solid #fff;
+  box-shadow: 3px 3px 15px black;
+  transition: 0.5s;
+  /* border: 1px solid red; */
+}
+.item:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: url(./cursor/ragnarok-hand-press.cur), pointer;
+
+}
+.item img {
+  position: absolute;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 300px;
+  max-height: 198px;
+  cursor: url(./cursor/ragnarok-hand-press.cur), pointer;
+  transform: scale(1);
+  transition: 0.5s;
+  /* border: 1px solid red; */
+}
+
+#area-imagem{
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.534);
+  z-index: 5;
+  transition: 1s;
+  /* border: 1px solid red; */
+}
+#figura{
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  /* border: 1px solid wheat; */
+  z-index: 2;
+}
+.item .img-titulo{
+  color: var(--title-clr);
+  position: relative;
+  display: block;
+  width: 100%;
+  height: min-content;
+  z-index: 2;
+  
+}
+#imagem{
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 1px;
+  /* box-shadow: 1px 1px 20px white; */
+}
+.close-imagem{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  padding: 30px;
+  top: 10px;
+  color: white;
+  z-index: 3;
+  font-family: "Junegull-Regular", sans-serif;
+  font-size: 4em;
+  transition: 1s;
+  animation: vida 1s linear infinite;
+  /* border: 1px solid red; */
+}
+.close-imagem img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.close-imagem:hover{
+  color: red !important;
+  transition: 1s;
+  cursor: url(./cursor/ragnarok-hand-press.cur),default;
+}
+.prev{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 20px;
+  width: 200px;
+  height: 70%;
+  text-align: center;
+  color: white;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  background-color: white;
+  transition: 1s;
+}
+.prev img{
+  position: relative;
+  right: 20px;
+}
+.next{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 20px;
+  width: 200px;
+  height: 70%;
+  font-size: 5em;
+  text-align: center;
+  color: white;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  transition: 1s;
+  background-color: white;
+  transition: 1s;
+}
+.next img{
+  position: relative;
+  left: 20px;
+}
+.next:hover img{
+  animation: next 0.4s linear infinite alternate-reverse;
+  cursor: url(./cursor/ragnarok-hand-press.cur), default;
+}
+.prev:hover img{
+  animation: prev 0.4s linear infinite alternate-reverse;
+  cursor: url(./cursor/ragnarok-hand-press.cur), default;
+}
+
+.servidor-video{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  /* border: 1px solid red; */
+}
+
+.servidor-video video{
+  position: relative;
+  box-shadow: 5px 5px 10px black;
+  width: 100%;
+  max-width: 853px;
+  max-height: 480px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+video:hover {
+  cursor: url(./cursor/ragnarok-hand-press.cur),default;
+}
+/* ESTILIZACAO SERVER */
+
+/* ESTILIZACAO DOWNLOADS */
+#downloads{
+  padding: 150px;
+  height: 100vh;
+  background-color: #A8A8B7;
+  background-image: url(./img/bg/Prontera.webp);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+#downloads .divisor-effect-black{
+  width: 55%;
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-size: inherit;
+  background-repeat: repeat-x;
+  /* border: 1px solid red; */
+}
+.downloads{
+  display: flex;
+  width: 95%;
+  height: max-content !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.613);
+  box-shadow: 3px 3px 15px black;
+  border-radius: 20px;
+  /* border: 1px solid red; */
+}
+.download-title{
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.title{
+  width: max-content;
+}
+.download-title h1{
+  font-size: 4em;
+  font-weight: 900;
+  /* border: 1px solid red; */
+}
+
+.area-downloads{
+  width: 100%;
+  max-width: 900px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  padding-bottom: 30px;
+  /* border: 1px solid red; */
+}
+.area-downloads h2{
+  color: var(--title-clr);
+}
+.area-downloads p{
+  font-weight: 600;
+  
+}
+.patch{
+  width: 100%;
+  max-width: 300px !important;
+  max-width: max-content;
+  /* border: 1px solid red; */
+}
+.patch button{
+  position: relative;
+  padding: 10px 20px;
+  margin-top: 5%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 600;
+  box-shadow: 3px 3px 1px black;
+}
+.patch button:hover{
+  top: 2px;
+  left: 2px;
+  box-shadow: 1px 1px 1px black;
+}
+.d-lite{
+  margin-right: 10px;
+}
+/* ESTILIZACAO DOWNLOADS */
+
+/* ESTILIZACAO DOAÇÃO */
+  #doacao{
+    padding: 150px;
+    width: 100%;
+    background-color: var(--title-clr);
+    color: white;
+    overflow: hidden;
+  }
+  #doacao .divisor-effect-gold{
+    width: 50%;
+    background-size: inherit;
+    background-repeat: repeat-x;
+  }
+  #doacao h1{
+    color: var(--gold-clr) !important;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px white;
+  }
+  .doar{
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
+  .divisor-doacao{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border: 1px solid green; */
+  }
+  .rops{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:10px;
+    text-align: center;
+    text-justify: justify;
+    z-index: 2 !important;
+    /* border: 1px solid red; */
+  }
+  .rops-texto{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-right: 15px;
+    /* border: 1px solid blue; */
+  }
+  .rops-texto h2{
+    border-bottom: 1px dashed;
+    margin-bottom: 10px;
+  }
+
+  .rede{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* border: 1px solid red; */
+    transition: 1s;
+  }
+  .rops-texto .email{
+    color: var(--gold-clr);
+    font-weight: 600;
+    left: 10px;
+    bottom: 20px;
+  }
+
+  #area-btn-whatsapp{
+    width: max-content;
+    bottom: 10px;
+    right: 60px;
+    z-index: 1 !important;
+    background-color: #2AA81A;
+    border-radius: 20px;
+    box-shadow: 3px 3px 1px black;
+    /* border: 1px solid red; */
+  }
+  #btn-whatsapp a{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+  #area-btn-whatsapp:hover {
+    position: relative;
+    bottom: -2px;
+    right: -2px;
+    box-shadow: 1px 1px 1px black;
+  }
+  #btn-whatsapp a>span{
+    color: white;
+    font-weight: 900;
+    margin-left: 5px;
+  }
+
+  .qrCode{
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    min-width: 100px;
+    flex-direction: column;
+    height: max-content;
+    /* border: 1px solid red; */
+  }
+  .qrCode h2{
+    /* border: 1px solid blue; */
+    width: max-content;
+    margin: 0 auto;
+    padding: 10px 5px;
+  }
+  .qrCode p{
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 600;
+    color: var(--gold-clr);
+  }
+  .code{
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: max-content;
+    min-width: 300px;
+    box-shadow: 3px 3px 10px black;
+    cursor: url(./cursor/ragnarok-hand-press.cur), pointer;
+    /* border: 1px solid red; */
+  }
+  .code img{
+    position: relative;
+    width: 100%;
+  }
+  .gold{
+    text-transform: uppercase;
+    color: var(--gold-clr);
+    font-weight: 900;
+    text-shadow: 1px 1px 1px white;
+  }
+  .golden{
+    color: var(--gold-clr);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  #ilustracao1{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    left: 0;
+    bottom: 100px;
+    opacity: 0.2;
+    background-image: url(./img/images/third_about_img3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1 !important;
+    /* border: 1px solid red; */
+  }
+  #ilustracao2{
+    position: absolute;
+    background-image: url(./img/images/third_about_img2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40%;
+    height: 40%;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    animation: moviment 10s linear infinite;
+    /* border: 1px solid red; */
+  }
+  
+  .mercadoPago{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+  }
+  .link{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid red; */
+  }
+  .link a{
+    display: flex;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--branco-clr);
+    background-color: var(--gold-clr);
+    gap: 10px;
+    box-shadow: 3px 3px 1px black;
+    border-radius: 10px;
+  }
+  .link a:hover{
+    position: relative;
+    top: 2px;
+    left: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+/* ESTILIZACAO DOAÇÃO */
+
+/* ESTILIZAÇÕA REGRAS */
+  #regras{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding: 100px 0px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(./img/images/dots.png);
+    background-position: center;
+    background-repeat: repeat;
+  }
+  .area-tabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px ;
+    padding: 50px;
+    /* border: 1px solid red; */
+  }
+  .tabela table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: separate;
+    text-align: center;
+    border-color: black;
+  }
+  .tabela table tr th{
+    border: 1px solid black;
+    padding: 5px 0;
+    color: white;
+    background-color: var(--gold-clr);
+    width: max-content;
+  }
+  .tabela table tr:nth-child(2n){
+    background-color: #eeeeee8f;
+  }
+  .tabela table tr td{
+    border: 1px solid black;
+  }
+  .gold-clr{
+    color: white;
+    font-weight: 600;
+    background-color: var(--gold-clr);
+  }
+/* ESTILIZAÇÕA REGRAS */
+
+/* ESTILIZACAO FOOTER */
+  #footer{
+    position: relative;
+    background-color: white;
+    background-image: url(./img/bg/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    padding-top: 100px;
+    overflow: hidden;
+    /* border: 1px solid green; */
+  }
+  .area-footer{
+    position: relative;
+    display: block;
+    /* border: 1px solid red; */
+    text-align: left;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    padding-top: 100px;
+  }
+  .footer-row{
+    justify-content: left;
+    align-items: center;
+  }
+  .footer-texto{
+    width: 33%;
+    display: block;
+    color: white;
+    padding: 0 30px;
+    /* border: 1px solid red; */
+  }
+  .footer-texto h2{
+    color: var(--laranja-clr);
+    text-shadow: 2px 2px 2px var(--title-clr);
+  }
+  .footer-texto p{
+    text-align: center;
+  }
+  .footer-widget{
+    width: 33%;
+    /* border: 1px solid red; */
+  }
+  .footer-redes{
+    /* border: 1px solid red; */
+    width: max-content;
+    margin: 0 auto;
+  }
+  .footer-redes h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-bottom: 10px;
+  }
+  .footer-redes > div{
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-redes > div img{
+    width: 40px;
+    /* border: 1px solid red; */
+  }
+  .copyright{
+    width: 100%;
+    padding: 10px 0;
+    /* border: 1px solid red; */
+  }
+  #npc3{
+    position: absolute;
+    width: 30%;
+    height: 280px;
+    right: 0;
+    bottom: 0px;
+    /* border: 1px solid blue; */
+  }
+  #npc3 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotateInDownRight 2s ease-in-out 3;
+  }
+  .clear{
+    clear: both;
+  }
+/* ESTILIZACAO FOOTER */
+
+
+
+
+
+/* CSS MEDIA QUERYS */
+
+@media screen and (max-width: 1600px) {
+  /* #### ESTILIZACAO TOPO ##### */
+  .topo {
+    width: 100%;
+    height: 100%;
+    padding-top: 6%;
+    background-size: cover;
+    transition: 1s;
+    /* border: 1px solid red; */
+  }
+  #apresentacao {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+    /* overflow: hidden; */
+    padding-left: 200px;
+    transition: 1s;
+    /* border: 10px solid green; */
+  }
+  #cabecalho {
+    display: flex;
+    width: 100%;
+    min-width: min-content;
+    height: min-content;
+    padding: 5px 50px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+  }
+  .logo {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+
+  .navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    transition: 1s;
+    /* border: 1px solid red; */
+  }
+  .navegacao ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .navegacao ul li {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #homepg {
+    position: relative;
+    top: -140px;
+    font-size: 1.4rem !important;
+    left: 0;
+    width: 400px;
+    height: max-content;
+    padding: 10px 30px 50px 30px;
+    height: max-content;
+    min-width: 510px;
+    transition: 1s;
+    /* border: 1px solid red; */
+  }
+  #homepg h1 {
+    font-size: 5rem;
+  }
+
+  #cookies {
+    right: 10px;
+    transition: 1s;
+  }
+/* #### ESTILIZACAO TOPO ##### */
+
+/* ##### ESTILIZACAO SOBRE */
+  #sobre {
+    width: 95%;
+    min-width: 852px;
+  }
+/* ##### ESTILIZACAO SOBRE */
+
+/* ESTILIZACAO SERVIDOR */
+
+/* ESTILIZACAO SERVIDOR */
+}
+
+@media screen and (max-width: 1500px) {
+/* #### ESTILIZACAO TOPO ##### */
+  #cabecalho {
+    width: 100%;
+    background: transparent;
+    animation: none;
+    flex-direction: row-reverse;
+    height: 70px;
+    /* border: 1px solid red; */
+    margin-top: 20px;
+  }
+  #btn-menu {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    outline: none;
+    border: none;
+    z-index: 3;
+    /* border: 1px solid red; */
+  }
+  .navegacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: max-content;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    /* border: 1px solid blue; */
+  }
+  .logo {
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+  }
+  .menu {
+    position: fixed !important;
+    top: 0;
+    right: -700px;
+    width: 30%;
+    min-width: 400px;
+    height: max-content;
+    padding: 20px 20px 40px 20px;
+    background-color: rgba(255, 166, 0, 0.900);
+    color: black !important;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5px;
+    z-index: 3;
+    animation: 1s;
+    font-weight: 700;
+    /* border: 1px solid red; */
+  }
+  #close-menu {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    background-image: url(./img/icones/close.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    /* border: 1px solid red; */
+  }
+  .casa {
+    display: none;
+  }
+  .menu ul {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 40px 0;
+    text-align: center;
+    align-items: left;
+    z-index: 2;
+    /* border: 1px solid red; */
+  }
+  .menu ul li {
+    position: relative;
+    width: 100% !important;
+    
+    text-align: left;
+    display: flex;
+    color: black;
+    width: max-content;
+    height: max-content;
+    /* border: 1px solid blue; */
+  }
+  .menu ul li .menu-opt{
+    position: relative;
+    width: 100% !important;
+    color: black;
+    font-size: 2rem !important;
+    width: max-content;
+    height: max-content;
+    /* border: 1px solid green; */
+  }
+  .menu-opt:hover{
+    color: white !important;
+  }
+  #vote {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    top: 15px;
+    left: 20px;
+    transition: 1s;
+    z-index: 3;
+    /* border: 1px solid red; */
+  }
+  .video-sec-area {
+    width: 100%;
+  }
+/* #### ESTILIZACAO TOPO ##### */
+
+/* ##### ESTILIZACAO GALERY ##### */
+  .servidor-galery {
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content max-content;
+  }
+/* ##### ESTILIZACAO GALERY ##### */
+}
+
+@media screen and (max-width: 1000px) {
+/* ESTILIZACAO TOPO */
+  #topo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    border: 1px solid red;
+  }
+  #apresentacao {
+    position: relative;
+    top: 0;
+    width: 90%;
+    height: 100vh;
+    /* border: 1px solid red; */
+    padding: 0 50px;
+    margin-bottom: 100px;
+  }
+  .navegacao{
+    /* border: 1px solid red; */
+    top: -20px;
+  }
+  #homepg {
+    width: 100% !important;
+    position: relative;
+    margin-top: 210px !important;
+    transition: 1s;
+    margin-bottom: 100px;
+  }
+  .logo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60%;
+    top: -20px;
+    transition: 1s;
+    /* border: 1px solid red; */
+  }
+  .logo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100%;
+  }
+  #btn-menu{
+    top: -27px;
+    transition: 1s;
+  }
+  #propaganda-sobre {
+    width: 90%;
+    background-size: contain;
+    background-position: center;
+    box-shadow: none;
+    /* border: 1px solid red; */
+  }
+  .login a{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    /* border: 1px solid white; */
+  }
+/* ESTILIZACAO TOPO */
+
+/* ESTILIZACAO ABOUT */
+
+  #sobre {
+    position: relative;
+    width: 95%;
+    min-width: 100px;
+    flex-direction: column;
+    overflow: visible;
+    /* background-color:blue; */
+  }
+  #sobre .sobre-row {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding: 30px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* border: 1px solid red; */
+  }
+  .area-texto {
+    position: relative;
+    flex-direction: column;
+    overflow: visible;
+    margin-top: 50px;
+    overflow: scroll;
+    width: 100%;
+    min-width: 100%;
+    max-width: max-content;
+    /* border: 2px solid black; */
+    margin: 10px 0;
+  }
+  .texto {
+    width: 100%;
+    min-width: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: none;
+    min-width: none;
+  }
+  .texto h1 {
+    word-wrap: break-word;
+    width: 90%;
+    max-width: max-content;
+    min-width: 100px;
+    word-wrap: break-word;
+    font-size: 1.3em;
+    text-align: center;
+    /* border: 1px solid red; */
+  }
+  .divisor-effect-black {
+    position: relative;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-size: contain;
+  }
+  .texto ul li {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .texto ul li p {
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 100%;
+    min-width: 100px;
+    text-align: left;
+    font-size: 1em;
+    word-wrap: break-word;
+    /* border: 1px solid green; */
+  }
+/* ESTILIZACAO ABOUT */
+
+/* ##### ESTILIZACAO GALERY ##### */
+  .servidor{
+    overflow: visible;
+    position: relative;
+  }
+  .servidor-galery {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    grid-template-columns: max-content;
+    grid-template-rows: auto;
+    max-width: 900px;
+    min-width: 280px;
+    margin: 0;
+    /* border: 2px solid blue; */
+  }
+  .item{
+    display: block;
+    max-width: 100%;
+    height: min-content;
+    height: 180px;
+    padding: 0;
+    min-width: 280px;
+  }
+  .item img{
+    width: 100%;
+    min-width: 280px;
+  }
+
+   #figura{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: max-content;
+  }
+ 
+  .prev{
+  z-index: 3;
+  background-color: transparent;
+  width: 40%;
+  }
+  .prev img{
+    opacity: 0.7;
+    width: 50%;
+  }
+  .next{
+   z-index: 3;
+   background-color: transparent;
+   width: 40%;
+  }
+  .next img{
+    opacity: 0.7;
+    width: 50%;
+  } 
+  .servidor-video{
+    position: relative;
+    width: 100%;
+    height: max-content;
+  }
+  .servidor-video video{
+    position: relative;
+    box-shadow: 5px 5px 10px black;
+    width: 100%;
+  }
+  .servidor-video p{
+    margin-bottom: 30%;
+    font-size: 1.2em;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+  }
+  #npc1{
+    right: 0;
+  }
+/* ##### ESTILIZACAO GALERY ##### */
+}
+
+@media screen and (max-width: 750px) {
+/* ESTILIZACAO TOPO */
+  #about {
+    margin: 0;
+    padding: 0;
+    
+  }
+  .topo {
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .logo {
+    display: none;
+  }
+  #propaganda-sobre {
+    display: none;
+  }
+  #inicio .topo{
+    height: max-content;
+  }
+  #apresentacao {
+    padding: 0;
+    height: max-content;
+    /* border: 1px solid red; */
+  }
+  #fundo-personagens {
+    position: absolute;
+    top: 200px;
+    left: -100px;
+    transition: 1s;
+  }
+  #fundo-personagens img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    transition: 1s;
+  }
+  #homepg {
+    width: 90%;
+    height: max-content;
+    min-width: 200px;
+    border-radius: 50px;
+    font-size: 2em !important;
+  }
+  #homepg h1 {
+    font-size: 1.5em;
+    width: 100%;
+    line-height: 60px !important;
+    transition: 1s;
+  }
+  .divisor-effect-gold {
+    background-size: contain;
+  }
+  #homepg h2 {
+    font-size: 1em;
+    line-height: 40px;
+    transition: 1s;
+  }
+  .logar-ja-tenho-conta {
+    /* border: 1px solid red; */
+    padding: 0;
+    margin-bottom: 10px;
+    transition: 1s;
+  }
+  .logar-ja-tenho-conta a {
+    margin: 10px 0 50px 0;
+    padding: 0;
+    font-size: 1.2em !important;
+    transition: 1s;
+  }
+  .logar-social-media img {
+    width: 50px;
+    transition: 1s;
+  }
+  .logar-footer {
+    font-size: 0.7em;
+    transition: 1s;
+  }
+  #cookies {
+    right: 2px;
+    bottom: 5px;
+    width: 99%;
+  }
+/* ESTILIZACAO TOPO */
+
+/* ESTILIZACAO GALERY */
+.item h2{
+  color: var(--laranja-clr) !important;
+}
+/* ESTILIZACAO GALERY */
+
+/* ESTILIZACAO DOWNLOADS */
+  #downloads{
+    padding: 50px 0;
+    height: max-content;
+  }
+  .downloads{
+    width: 95%;
+  }
+  .area-downloads{
+    flex-direction: column;
+    gap: 100px;
+    /* border: 1px solid red; */
+  }
+  .title h1{
+    font-size: 3.5em;
+  }
+/* ESTILIZACAO DOWNLOADS */
+
+/* ESTILIZACAO  DOAÇÃO*/
+#doacao{
+  position: relative;
+  height: 100%;
+  padding: 0;
+}
+.doar{
+  position: relative;
+  width: 100%;
+  height: max-content;
+  /* border: 1px solid red; */
+}
+.rops{
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+.rops-texto{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  /* border: 2px solid red;  */
+}
+.rede{
+  margin-bottom: 30px;
+}
+#ilustracao1{
+  width: 100%;
+  height: 100%;
+  bottom: -500px;
+}
+#ilustracao2{
+  top: -140px;
+  right: -30px;
+  width: 70%;
+  opacity: 0.9;
+}
+.golden{
+  text-decoration: underline;
+  text-shadow: 1px 1px 1px white;
+}
+.email{
+  margin-top: 15px;
+  font-size: 1.4em;
+  font-weight: 900;
+}
+.mercadoPago{
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+}
+.qrCode{
+  margin: 0 auto 40px auto;
+  gap: 10px;
+  /* border: 1px solid red; */
+}
+/* ESTILIZACAO  DOAÇÃO*/
+
+/* ESTILIZACAO REGRAS */
+#regras{
+  display: none;
+}
+/* ESTILIZACAO REGRAS */
+
+/* ESTILIZACAO FOOTER */
+#footer{
+  background-color: var(--title-clr);
+}
+#npc3{
+  display: none;
+}
+.footer-row{
+  flex-direction: column;
+}
+.footer-texto{
+  width: 100%;
+  /* border: 1px solid red; */
+}
+.footer-texto p{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-widget{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  /* border: 1px solid red; */
+}
+.copyright{
+  font-size: 1em;
+  padding: 0 20px;
+  /* border: 1px solid red; */
+}
+/* ESTILIZACAO FOOTER */
+
+}
+
+
+
+/* FIM CSS MEDIA QUERYS */
+
+/* FIM ESTILIZAÇÃO DEYVID */

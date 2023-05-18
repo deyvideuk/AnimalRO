@@ -1,0 +1,626 @@
+	<!DOCTYPE html>
+	<html lang="pt-BR">
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" href="img/fav.png">
+		<meta name="author" content="codepixer">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta charset="UTF-8">
+
+		<title>Mundo AnimalRO - Servidor</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="shortcut icon" href="./img/logo/favicon_io/favicon-32x32.png" type="image/x-icon">
+		<link rel="apple-touch-icon" href="./img/logo/favicon_io/apple-touch-icon.png">
+		link
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="./index.css" >
+			<link rel="stylesheet" href="https://use.typekit.net/gpo1fju.css">
+    		<link rel="preconnect" href="https://fonts.googleapis.com">
+    		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    		<link href="https://fonts.googleapis.com/css2?family=Mandali&family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+    		
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+			<script defer src="./index.js"></script>
+		</head>
+		
+		<body id="inicio">
+			
+			<div class="topo">
+				<div id="apresentacao">
+					<header id="cabecalho">
+						<button type="menu" id="btn-menu" onclick="abrirMenu()">
+							<img src="./img/icones/barra-de-menu.png" alt="">
+						</button>
+						<div class="logo">
+							<a href="#inicio">
+								<img src="./img/gif/fundo-site-gif.gif" alt="gif">
+							</a>
+						</div>
+						<nav class="navegacao">
+							<div class="menu">
+								<div id="close-menu" onclick="fecharMenu()"></div>
+								<ul>
+									<li>
+										<a href="#about" class="menu-opt" onmouseover="vai()" onclick="fecharMenu()">Informação</a>
+									</li>
+									<li>
+										<a href="#server" class="menu-opt" onmouseover="vai()" onclick="fecharMenu()">Servidor</a>
+									</li>
+									<li>
+										<a href="#downloads" class="menu-opt" onmouseover="vai()" onclick="fecharMenu()">Download</a>
+									</li>
+									<li>
+										<a href="#doacao" class="menu-opt" onmouseover="vai()" onclick="fecharMenu()">Doação</a>
+									</li>
+									<li>
+										<a href="#regras" class="menu-opt" onmouseover="vai()" onclick="fecharMenu()">Regras</a>
+									</li>
+									<li class="disable">
+										<s><a title="Ainda estamos trabalhando nisto!" class="menu-opt" onmouseover="vai()" >Suporte</a></s>
+									</li>
+									
+								</ul>
+							</div>
+							<a href="https://mundoanimalro.com.br/fluxcp/?module=voteforpoints" target="_blank" title="Votar no servidor TOP" class="animal" id="vote">VOTE</a>
+						</nav>
+						<div class="casa efeito">
+							<a href="#inicio">
+								<img src="/img/icones/casa-laranja.png" alt="">
+							</a>
+						</div>
+					</header>
+					<div id="homepg">
+						<div class="logo-titulo">
+							<img src="/img/logo/logo-site.png" alt="">
+						</div>
+						<div class="titulo">
+							<h2>
+								Seja muito <span style="font-family: 'Junegull-Regular', sans-serif;color: orange;">bem vindo</span> Ao
+							</h2>
+							<h1>Mundo Animalro</h1>
+							<div class="divisor-effect-gold"></div>
+								<h2 class="login">
+									<a style="text-decoration: none; font-family: 'Junegull-Regular', sans-serif;" class="laranja efeito" href="https://mundoanimalro.com.br/fluxcp/" target="_blank">Login</a>
+								</h2>
+						</div>
+						<div class="logar">
+							<div class="logar-ja-tenho-conta">
+								<h3>
+									<a class="laranja efeito" ><s title="Estamos trabalhando nisto!">Já tenho uma conta!</s></a>
+								</h4>
+							</div>
+							<div class="logar-social-media">
+								<a href="https://discord.com/invite/ZYN2S74yVn" target="_blank" class="efeito">
+									<img src="img/icones/discordi.png" alt="Discord" title="Entre em nosso grupo do Discord">
+								</a>
+								<a href="https://www.instagram.com/mundoanimalro/" target="_blank" class="efeito">
+									<img src="img/icones/instagram.png" alt="Instagram" title="Siganos no Instagram">
+								</a>
+							</div>
+							<div class="logar-footer">
+								<p>&copy; 2023 mundo animalro. todos os direitos reservados</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="fundo-personagens">
+						<img src="./img/images/personagens-site.png" alt="" >
+					</div>
+
+					<div id="cookies" class="cookies">
+						<div>
+							<h3>ESTE SITE USA COOKIES</h3>
+							<p>
+								ESTE SITE USA COOKIES PARA MELHORAR A EXPERIÊNCIA DO USUÁRIO. AO USAR NOSSO SITE, VOCÊ CONCORDA COM TODOS OS COOKIES DE ACORDO COM NOSSA POLITICA DE COOKIES.
+							</p>
+							<p id="mais">
+								Nós utilizamos cookies de sessão. Eles são temporários e expiram quando você fecha o navegador ou quando a sessão termina.
+							</p>
+						</div>
+						<div class="btn-cookies">
+							<span onclick="excluirElemento('#cookies')" id="aceitar" class="aceitar efeito">Aceitar</span>
+							<span onclick="lerMais(this)" id="ler-mais" class="ler-mais efeito">Ler mais</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+					<!-- <form action="https://mundoanimalro.com.br/fluxcp/" method="POST"> -->
+					<!-- <form action="./login.php" method="POST">
+						<p align="center"><font size="12em" color="#FFF">LOGIN</font></p>
+						<div class="inputbox">
+							<input type="usuario" name="email">
+							<label for="">Usuario</label>
+						</div>
+						<div class="inputbox">
+							<input type="password" name="senha">
+							<label for="">Senha</label>
+						</div>
+
+						<button>CONECTAR</button>
+						<div class="register">
+							 <p>Não tenho uma conta! <a onclick="newPopup()">REGISTRAR</a></p> 
+						</div>
+					</form> -->
+
+			<!-- Start video-sec Area -->
+			<section id="about">
+				<div id="propaganda-sobre" class="propaganda"></div>
+				<div id="sobre" class="container">
+					<div class="sobre-row">
+						<div class="area-video">
+							<img src="./img/images/video-bg.jpg" class="bg-img" alt="">
+							<img src="./img/gif/valkyrie-randgris.gif" class="personagem-about" alt="">
+							
+						</div>
+						
+						<div class="area-texto ">
+							<div class="texto">
+								<h1>Veja um pouco do que lhe espera</h1>
+								<div class="divisor-effect-black"></div>
+								<ul>
+									<li>
+										<p>
+											Rates: <span>200x200x10</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											Status Máximo: <span>129</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											Level Máximo: <span>255/80</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											Drops de Equipamentos: <span>1%</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											Cartas Normais: <span>0,50%</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											Cartas MVP: <span>0.01%</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											Atributos: <span>120</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											Aspd: <span>195</span>
+										</p>
+									</li>
+								</ul>
+							</div>
+							<div class="texto">
+								<h1>Comandos liberados!</h1>
+								<div class="divisor-effect-black"></div>
+								<ul>
+									<li>
+										<p>
+											@go: <span>Leva você até a cidade desejada!</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											@autoloot: <span>Leva todos os itens dropados direto pro inventário!</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											@eventos <span>Leva você para o mapa de eventos!</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											@autotrade <span>Deixa o seu mercante em autotrade!</span>
+										</p>
+									</li>
+								</ul><br>
+								<p>
+									Entre outros...
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End video-sec Area -->
+			<!-- Inicio Area Servidor -->
+				<!-- Inicio Area-full imagem -->
+				<div id="area-imagem">
+					<div class="btn prev" onclick="prev()" >
+						<img src="./img/icones/prev.svg" alt="Anterior">
+					</div>
+					<figure id="figura">
+						<img id="imagem" src="" alt="teste">
+					</figure>
+					<div class="close-imagem" onclick="fecharImg()">
+						<p>X</p>
+						<img src="./img/icones/close-2.png" alt="Fechar">
+					</div>
+					<div class="btn next" onclick="next()">
+						<img src="./img/icones/next.svg" alt="Próximo">
+					</div>
+				</div>
+				<!-- Fim Area-full imagem -->
+			<section id="server">
+				<div class="servidor container">
+					<div class="servidor-title">
+						<h1>Conheça o nosso servidor!</h1>
+					</div>
+					<div class="divisor-effect-black"></div>
+					<div class="servidor-galery" aria-valuemax="14">
+						<figure class="item" onclick="abrirImg(1)">
+							<h2 class="img-titulo">Level Up!</h2>
+							<img id="1" src="./img/gif/gif-galeria/New_LevelUp.webp" alt="Level Up!">
+						</figure>
+						<figure class="item" onclick="abrirImg(2)">
+							<h2 class="img-titulo">Hits</h2>
+							<img id="2" src="./img/gif/gif-galeria/hit.gif" alt="Hits">
+						</figure>
+						<figure class="item" onclick="abrirImg(3)">
+							<h2 class="img-titulo">Assumptio</h2>
+							<img id="3" src="./img/gif/gif-galeria/novo/Assumptio.gif" alt="Assumptio">
+						</figure>
+						<figure class="item" onclick="abrirImg(4)">
+							<h2 class="img-titulo">Double Shot</h2>
+							<img id="4" src="./img/gif/gif-galeria/novo/EdibleParchedAmericangoldfinch-max-1mb.gif" alt="Double Shot">
+						</figure>
+						<figure class="item" onclick="abrirImg(5)">
+							<h2 class="img-titulo">Espírito do Cavaleiro</h2>
+							<img id="5" src="./img/gif/gif-galeria/novo/Espírito_do_Cavaleiro.gif" alt="Espírito do Cavaleiro">
+						</figure>
+						<figure class="item" onclick="abrirImg(6)">
+							<h2 class="img-titulo">Lança Congelante</h2>
+							<img id="6" src="./img/gif/gif-galeria/novo/Lança_Congelante.gif" alt="Lança Congelante">
+						</figure>
+						<figure class="item" onclick="abrirImg(7)">
+							<h2 class="img-titulo">Personagens</h2> 
+							<img id="7" src="./img/gif/gif-galeria/novo/personagem-casal-herol.jfif" alt="Personagens">
+						</figure>
+						<figure class="item" onclick="abrirImg(8)">
+							<h2 class="img-titulo">Personagens</h2>             
+							<img id="8" src="./img/gif/gif-galeria/novo/personagem-casal.jfif" alt="Personagens">
+						</figure>
+						<figure class="item" onclick="abrirImg(9)">
+							<h2 class="img-titulo">Personagens</h2>
+							<img id="9" src="./img/gif/gif-galeria/novo/personagem-menina.jfif" alt="Personagens">
+						</figure>
+						<figure class="item" onclick="abrirImg(10)">
+							<h2 class="img-titulo">Personagens</h2>
+							<img id="10" src="./img/gif/gif-galeria/novo/personagem-mulher.jfif" alt="Personagens">
+						</figure>
+						<figure class="item" onclick="abrirImg(11)">
+							<h2 class="img-titulo">Personagens</h2>
+							<img id="11" src="./img/gif/gif-galeria/novo/personagem.jfif" alt="Personagens">
+						</figure>
+						<figure class="item" onclick="abrirImg(12)">
+							<h2 class="img-titulo">Personagens</h2>
+							<img id="12" src="./img/gif/gif-galeria/novo/Personagens-Bruxo.png" alt="Personagens">
+						</figure>
+						<figure class="item" onclick="abrirImg(13)">
+							<h2 class="img-titulo">Personagens</h2>
+							<img id="13" src="./img/gif/gif-galeria/novo/personagens-casal-art.jfif" alt="Personagens">
+						</figure>
+						<figure class="item" onclick="abrirImg(14)">
+							<h2 class="img-titulo">AnimalRO</h2>
+							<img id="14" src="./img/gif/gif-galeria/novo/lion-animalro.jpeg" alt="Capa AnimalRO">
+						</figure>
+					</div>
+					
+					<div class="divisor-effect-black"></div>
+					<div class="servidor-title">
+						<h1>Veja está Game Play!</h1>
+					</div>
+					<div class="divisor-effect-black"></div>
+					<div class="servidor-video">
+						<video id="video" src="./video/game-play.mp4" poster="./video/capa/ragnarok-banner.png" controls="auto" preload="auto" frameborder="0" title="O Último Testamento Ragnarok Online" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onclick="excluirElemento('video')"></video>
+						<p>
+							Créditos: <span><a href="https://www.youtube.com/watch?v=SnkjphQhqJk&ab_channel=Ragnarok%26M%C3%BAsica" target="_blank">The Last Testament Ragnarok Online WOE 25/04/2021</a></span>
+						</p>
+					</div>
+					<div id="npc1">
+						<img src="./img/gif/gif-galeria/novo/blacksmith.gif" alt="">
+					</div>
+				</div>
+			</section>
+			
+			<!-- Fim Area Servidor -->
+			<!-- Inicio Area Download -->
+			<section id="downloads">
+				<div class="downloads container">
+					<div class="download-title">
+						<div class="title">
+							<h1>Downloads</h1>
+						</div>
+						<div class="sub-title">
+							<h2>Comece sua Jornada!</h2>
+						</div>
+					</div>
+					<div class="divisor-effect-black"></div>
+					<div class="area-downloads">
+						<div class="d-lite patch">
+							<img src="./img/icones/download.png" alt="Patch Lite 1.0">
+							<h2>Download Patch Lite 1.0</h2>
+							<p>Patch simplificado, basta baixar e colocar na pasta</p>
+							<button type="button" disabled title="Estamos trabalhando nisto!" onclick="baixarLite()"><s>Google Drive</s></button>
+						</div>
+						<div class="d-full patch">
+							<img src="./img/icones/btn_google.png" alt="Patch Full 1.0">
+							<h2>Download Patch Full 1.0</h2>
+							<p>Patch completo (FULL PATCH)</p>
+							<button type="button" title="Baixar agora!" onclick="baixarFull()">Google Drive</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Fim Area Download -->
+			<!-- Inicio Area Doações -->
+			<section id="doacao">
+					<div class="doar container">
+						<div class="title">
+							<h1>Doações</h1>
+						</div>
+						<div class="divisor-effect-gold"></div>
+						<div class="divisor-doacao">
+							<div class="rops">
+								<div class="rops-texto">
+									<h2>Adquirindo <span class="gold">rops</span></h2>
+									<p>
+										Nosso sistema de <span class="golden">ROPS</span> é bem simples e comum R$ 1,00 = 1.000 pontos de <span class="golden">ROPS</span>.
+										Você pode dropar Bônus de Cash de mvps e conseguir os mesmos in-game Nossa loja
+										de rops fica, no canto superior direito da tela ao lado do mini-mapa APROVEITE!
+										Nós não cobramos para você jogar aqui, então
+										esteja ciente que o ato de <span class="golden">doar</span> é voluntário
+									</p>
+									<br>
+									<h2>Faça sua <span class="gold">Doação</span></h2>
+									<p>
+										Para doar basta realizar uma <span class="golden">DOAÇÃO</span> via <span class="golden">PIX</span>, <span class="golden">Paypal</span> ou <span class="golden">Mercado Pago </span> em um dos valores
+										listado abaixo, Após a <span class="golden">DOAÇÃO</span> enviar comprovante para o e-mail ou whatsapp
+									</p>
+									<br>
+									<div class="rede">
+										<div id="area-btn-whatsapp">
+											<div id="btn-whatsapp">
+												<a href="https://api.whatsapp.com/send?phone=+5583987380442&text=Olá!, acabei de vir do site do AnimalRO, gostaria de obter mais informações sobre o servidor, ou comprar ROPS." target="_blank">
+													<img src="./img/icones/whatsapp.png" alt="whatsapp icone">
+													<span>whatsapp</span>
+												</a>
+											</div>
+										</div>
+										<span class="email">E-mail: henriquebatistads24@gmail.com</span>
+									</div>
+									<div class="mercadoPago">
+										<div class="link link-50">
+											<a href="https://mpago.la/2bcGHS4" target="_blank">
+												<img src="./img/icones/pago.png" alt="Logo-marca mercado pago">
+												<span>Mercado Pago R$50</span>
+											</a>
+										</div>
+										<div class="link link-100">
+											<a href="https://mpago.la/1mDyEas" target="_blank">
+												<img src="./img/icones/pago.png" alt="logo-marca mercado pago">
+												<span>Mercado pago R$100</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="qrCode">
+									<h2>QR-Code PIX</h2>
+									<div class="code" onclick="abrirImg('qr')">
+										<img id="qr" src="./img/icones/QRCode400x400.png" alt="Chave pix QR code">
+									</div>
+									<p>
+										José Henrique Batista da Silva
+									</p>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="ilustracao1"></div>
+					<div id="ilustracao2"></div>
+			</section>
+			<!-- Fim Area Doações -->
+			<!-- Inicio regras -->
+			<section id="regras">
+				<div class="area-tabela container">
+					<div class="tabela-titulo">
+						<h1>Tabela de <span class="gold">Punição</span></h1>
+					</div>
+					<div class="tabela">
+						<table class="tabelas-equipamentos">
+                            <tr>
+                                <th rowspan="1">Ação</th>
+                                <th rowspan="1">Categoria</th>
+                                <th rowspan="1">1ª ocorrência</th>
+                                <th rowspan="1">2ª ocorrência</th>
+                                <th rowspan="1">3ª ocorrência</th>
+                                <th rowspan="1">4ª ocorrência</th>
+                            </tr>
+                            <tr>
+                                <td rowspan="10" class="gold-clr">Conduta</td>
+                                <td>Linguagem ou Comportamento Inapropriado</td>
+                                <td>7 dias de bloqueio de conta</td>
+                                <td>15 dias de bloqueio de conta</td>
+                                <td>30 dias de bloqueio de conta</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                            </tr>
+                            <tr>
+                                <td>Comportamento Discriminatório e/ou Violento</td>
+                                <td>30 dias de bloqueio de conta</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>                            
+							<tr>
+                                <td>Racismo</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                                <td>-</td>
+                                <td>-</td>
+								<td>-</td>
+                            </tr>                            
+							<tr>
+
+                                <td>Desrespeito ao Staff</td>
+                                <td>7 dias de bloqueio de conta</td>
+                                <td>15 dias de bloqueio de conta</td>
+                                <td>30 dias de bloqueio de conta</td>
+								<td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                            </tr>                            
+							<tr>
+                               </tr><tr>
+                                <td>Má Conduta</td>
+                                <td>7 dias de bloqueio de conta</td>
+                                <td>15 dias de bloqueio de conta</td>
+                                <td>30 dias de bloqueio de conta</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                            </tr>  
+							<tr>
+                               </tr><tr>
+                                <td>Má Conduta - Clã</td>
+                                <td>Aviso ao Líder do Clã</td>
+                                <td>Aviso ao Líder do Clã + 15 dias de bloqueio da conta do Líder do Clã</td>
+                                <td><strong><span class="vermelho">Clã desfeito</span></strong></td>
+								<td>-</td>
+                            </tr>    							
+							                         
+                                       
+							<tr>
+                                <td>Nome Inapropriado - Personagem, clã, homúnculo, mascote</td>
+                                <td>7 dias de bloqueio de conta. O nome irregular será alterado genericamente ou, caso seja um clã, homúnculo ou mascote, esses não serão deletados.</td>
+                                <td>15 dias de bloqueio de conta. O nome irregular será alterado genericamente ou, caso seja um clã, homúnculo ou mascote, esses serão deletados.</td>
+                                <td>30 dias de bloqueio de conta. O nome irregular será alterado genericamente ou, caso seja um clã, homúnculo ou mascote, esses serão deletados.</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                            </tr>                            
+							
+                            <tr>
+                                <td>Representação</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="gold-clr">Irregularidades</td>
+                                <td>Anúncio irregular</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>                            
+							<tr>
+                                <td>Atividade irregular</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>                            
+							<tr>
+                                <td rowspan="3" class="gold-clr">Regras Gerais</td>
+                                <td>Conduta Geral</td>
+                                <td>3 dias de bloqueio de conta</td>
+                                <td>7 dias de bloqueio de conta</td>
+                                <td>15 dias de bloqueio de conta</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                            </tr>  
+                            <tr>
+                                <td>Conduta Geral - Regra 9.6</td>
+                                <td><strong><span class="vermelho">Bloqueio Permanente</span></strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+							<tr>
+                                <td>Bloqueio preventivo de conta para análise</td>
+                                <td>Até 30 dias de bloqueio de conta</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+						</table>
+					</div>
+				</div>	
+			</section>
+			<!-- End blog Area -->
+			<!-- start footer Area -->		
+			<footer id="footer">
+				<div class="area-footer container">
+					<div class="footer-row row">
+						<div class="footer-texto">
+							<h2>Seu Ragnarok Online</h2>
+							<p>
+								Não somos um projeto oficial, somos uma rede feitas por fãs para fãs <br> MMO-RPG Ragnarok Online
+							</p>
+						</div>
+						<div class="footer-widget">
+							<img src="./img/bgf.png" alt="">
+							<div class="footer-redes">
+							</div>
+						</div>
+						<div id="npc3">
+							<img src="./img/images/cta_img.png" alt="Imagem personagem">
+						</div>
+					</div>
+					<div class="footer-redes">
+						<h2>Sigam-nos</h2>
+						<div>
+							<a href="https://discord.com/invite/ZYN2S74yVn" target="_blank" class="efeito">
+								<img src="img/icones/discordi.png" alt="Discord" title="Entre em nosso grupo do Discord">
+							</a>
+							<a href="https://www.instagram.com/mundoanimalro/" target="_blank" class="efeito">
+								<img src="img/icones/instagram.png" alt="Instagram" title="Siganos no Instagram">
+							</a>
+						</div>
+					</div>
+					<div class="copyright">
+						<p><span>&copy;</span>Todos os direitos do código do site reservados - 2022 - version 1.0</p>
+					</div>	
+					<div class="clear"></div>
+				</div>
+				
+			</footer>	
+			<!-- End footer Area -->
+
+
+			<!-- SCRIPTS INCLUIDOS -->
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+			<script src="js/owl.carousel.min.js"></script>			
+			<script src="js/jquery.sticky.js"></script>
+			<script src="js/jquery.nice-select.min.js"></script>			
+			<script src="js/parallax.min.js"></script>	
+			<script src="js/waypoints.min.js"></script>
+			<script src="js/jquery.counterup.min.js"></script>					
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>
+			<!-- SCRIPTS INCLUIDOS -->
+
+		</body>
+	</html>
+
+
+
